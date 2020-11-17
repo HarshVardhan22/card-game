@@ -1,32 +1,24 @@
-import React from 'react';
-import './FrontPage.css';
-import Card from './Card';
+import React from "react";
+import "./FrontPage.css";
+import FaceValue from "./FaceValue";
+import { CardProvider } from "./CardContext";
 
 const FrontPage = () => {
-    return(
-        <div>
-            
-            <div className="container">
-                <h1>Memory Game!</h1>
-                <h3>Score: </h3>
-                <div className="cardsContainer">
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>
-                   <Card/>    
-                  
-                </div>
-            </div>
+  return (
+    <CardProvider>
+      <div>
+        <div className="container">
+          <h1>Memory Game!</h1>
+          <h3>Score: </h3>
+          <FaceValue/>
         </div>
-    );
-}
+        <div className="cardsContainer">
+        
+        </div>
+        
+      </div>
+    </CardProvider>
+  );
+};
 
-export default FrontPage
+export default FrontPage;

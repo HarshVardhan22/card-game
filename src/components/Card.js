@@ -1,10 +1,10 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () =>{
+const Card = ({faceValue}) =>{
     return(
         <div className = 'card'>
-            Hi, I am a card!
+            {faceValue}
         </div>
     )
 }
