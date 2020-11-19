@@ -15,10 +15,14 @@ export const CardProvider = (props) =>{
         arr[random2] = temp;
     }
     const[cardNumber,setCardNumber] = useState(arr);
- 
+
+    const [life,setLife] = useState(3);
+
+    const [score,setScore] = useState(0);
+
     
     return(
-        <CardContext.Provider value={[cardNumber,setCardNumber]}>
+        <CardContext.Provider value={{cardNumber,setCardNumber,life,setLife,score,setScore}}>
             {props.children}
         </CardContext.Provider>
     );

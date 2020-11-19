@@ -1,9 +1,11 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({faceValue}) =>{
+const Card = ({faceValue,id,checkSame}) =>{
+
+    
     return(
-        <div className = 'card'>
+        <div className = 'card' id = {id} onClick={(e) => checkSame(e)} >
             {faceValue}
         </div>
     )

@@ -1,23 +1,22 @@
-import React from "react";
-import "./FrontPage.css";
-import FaceValue from "./FaceValue";
-import { CardProvider } from "./CardContext";
+import React,{useContext} from "react";
+import {CardContext} from './CardContext';
+import "./CardsSection.css";
+import CardsSection from "./CardsSection";
+
 
 const FrontPage = () => {
+  const temp = useContext(CardContext);
+  // let string  = parseInt(score)
   return (
-    <CardProvider>
+   
       <div>
         <div className="container">
           <h1>Memory Game!</h1>
-          <h3>Score: </h3>
-          <FaceValue/>
-        </div>
-        <div className="cardsContainer">
-        
-        </div>
-        
+          <h3>Score: {temp.score}</h3>
+          <CardsSection/>
+        </div>       
       </div>
-    </CardProvider>
+    
   );
 };
 
