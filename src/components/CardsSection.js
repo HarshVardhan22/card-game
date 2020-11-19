@@ -46,7 +46,7 @@ const CardSection = () =>{
             setCardValue(0);
             setLife(life-1);
             if(life<=1)
-            alert('You suck Looser!');
+            alert('You lost! Want to restart');
         }  
     }
 
