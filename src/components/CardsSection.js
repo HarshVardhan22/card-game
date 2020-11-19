@@ -8,7 +8,10 @@ const CardSection = () =>{
     const temp = useContext(CardContext);
     const cardNumber = temp.cardNumber;
     const setCardNumber = temp.setCardNumber;
-
+    const score = temp.score;
+    const setScore = temp.setScore;
+    const life = temp.life;
+    const setLife = temp.setLife;
     
     const cardArray = cardNumber.map((value)=>(<Card faceValue = {value} checkSame = {checkSame}/>))
 
@@ -33,7 +36,7 @@ const CardSection = () =>{
                 const  filteredArray = cardNumber.filter(cards => cards!==cardValue);
                 setCardNumber(filteredArray);
                 setCardValue(0);
-                
+                setScore(score+10)
                 // e.target.classList.remove("card");
                 // e.target.classList.add("sameCard");
 
@@ -41,6 +44,9 @@ const CardSection = () =>{
     //if the user clicks on the wrong card
        else{
             setCardValue(0);
+            setLife(life-1);
+            if(life<=1)
+            alert('You suck Looser!');
         }  
     }
 

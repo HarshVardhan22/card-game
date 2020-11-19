@@ -13,6 +13,7 @@ const FrontPage = () => {
         <div className="container">
           <h1>Memory Game!</h1>
           <h3>Score: {temp.score}</h3>
+          <h3>Lives Remaining: {temp.life}</h3>
           <CardsSection/>
         </div>       
       </div>
