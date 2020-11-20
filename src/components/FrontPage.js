@@ -6,9 +6,9 @@ import CardsSection from "./CardsSection";
 
 const FrontPage = () => {
   const temp = useContext(CardContext);
-  // let string  = parseInt(score)
+ 
   return (
-   
+      
       <div>
         <div className="container">
           <h1>Memory Game!</h1>
@@ -22,3 +22,4 @@ const FrontPage = () => {
 };
 
 export default FrontPage;
+ 
