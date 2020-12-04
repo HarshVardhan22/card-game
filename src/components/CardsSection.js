@@ -12,10 +12,11 @@ let CardSection = () =>{
     const setScore = temp.setScore;
     const life = temp.life;
     const setLife = temp.setLife;
+
     
     const [cardValue,setCardValue] = useState(0);
-    const checkSame =(e)=> {    
-     
+    const checkSame =(e)=> {   
+   
         //if the user has clciked on a card for the first time
     
             if(cardValue===0)
@@ -28,7 +29,7 @@ let CardSection = () =>{
                         
                     const  filteredArray = cardNumber.filter(cards => cards!==cardValue);
                     setCardNumber(filteredArray);
-                    setCardArray(cardNumber.map((value)=>(<Card faceValue = "" id = {value} checkSame = {checkSame}/>)))
+                    //setCardArray(cardNumber.map((value)=>(<Card faceValue = "" id = {value} checkSame = {checkSame}/>)))
                     setCardValue(0);
                     setScore(score+10)        
     
@@ -44,11 +45,18 @@ let CardSection = () =>{
                 }  
             }
 
-    let [cardArray,setCardArray] = useState(cardNumber.map((value)=>(<Card faceValue = {value} id = {value} checkSame = {checkSame}/>)))
-
-    setTimeout(()=>{
-        setCardArray(cardNumber.map((value)=>(<Card faceValue = "" id = {value} checkSame = {checkSame}/>)))
-    },5000);
+    //let [cardArray,setCardArray] = useState()
+   let  cardArray = cardNumber.map((value)=>(<Card faceValue = {value} id = {value} checkSame = {checkSame}/>))
+        
+      //let vanish ;
+    //   clearTimeout(vanish)
+    //   vanish =  setTimeout(()=>{
+    //         console.log("gayab hu mai");
+          
+    //         setCardArray(cardNumber.map((value)=>(<Card faceValue = "" id = {value} checkSame = {checkSame}/>)))
+    //     },2000);
+    
+    console.log(cardArray);
     
 
     return(
