@@ -12,9 +12,8 @@ let CardSection = () =>{
     const setScore = temp.setScore;
     const life = temp.life;
     const setLife = temp.setLife;
-    const faceValue = temp.faceValue;
     const setFaceValue = temp.setFaceValue;
-    
+    const faceValue = temp.faceValue;
     const [cardValue,setCardValue] = useState(0);
     const checkSame =(e)=> {   
    
@@ -30,7 +29,6 @@ let CardSection = () =>{
                         
                     const  filteredArray = cardNumber.filter(cards => cards!==cardValue);
                     setCardNumber(filteredArray);
-                    //setCardArray(cardNumber.map((value)=>(<Card faceValue = "" id = {value} checkSame = {checkSame}/>)))
                     setCardValue(0);
                     setScore(score+10)        
     
@@ -46,31 +44,21 @@ let CardSection = () =>{
                 }  
             }
 
-    //let [cardArray,setCardArray] = useState()
-   let  cardArray = cardNumber.map((value)=>(<Card id = {value} checkSame = {checkSame}/>))
-    
+           
+   let  cardArray = cardNumber.map((value,index)=>(<Card id = {value} display = {faceValue[index]} checkSame = {checkSame}/>))
+   
+   //To change the faceValue of cards to blank after "n" seconds of loading the page
+
    setTimeout(()=>{
-        
-    console.log("gayab hu mai");
-    setFaceValue("")
-          
-  },2000);
-      //let vanish ;
-    //   clearTimeout(vanish)
-    //   vanish =  setTimeout(()=>{
-    //         console.log("gayab hu mai");
-          
-    //         setCardArray(cardNumber.map((value)=>(<Card faceValue = "" id = {value} checkSame = {checkSame}/>)))
-    //     },2000);
-    
-    console.log(cardArray);
-    
+        setFaceValue("")       
+    },5000);
+      
 
     return(
         <div className = "cardsContainer">
              {cardArray}          
         </div>
     );
-    };
+};
 
 export default CardSection;

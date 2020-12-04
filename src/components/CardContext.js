@@ -20,7 +20,7 @@ export const CardProvider = (props) =>{
 
     const [score,setScore] = useState(0);
 
-    const [faceValue,setFaceValue] = useState("puff ");
+    const [faceValue,setFaceValue] = useState(cardNumber);
     
     return(
         <CardContext.Provider value={{cardNumber,setCardNumber,life,setLife,score,setScore,faceValue,setFaceValue}}>
