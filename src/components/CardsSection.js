@@ -12,8 +12,8 @@ let CardSection = () =>{
     const setScore = temp.setScore;
     const life = temp.life;
     const setLife = temp.setLife;
-    const vanish = temp.vanish;
-    const setVanish = temp.setVanish;
+    const faceValue = temp.faceValue;
+    const setFaceValue = temp.setFaceValue;
     
     const [cardValue,setCardValue] = useState(0);
     const checkSame =(e)=> {   
@@ -47,12 +47,12 @@ let CardSection = () =>{
             }
 
     //let [cardArray,setCardArray] = useState()
-   let  cardArray = cardNumber.map((value)=>(<Card faceValue = {value} id = {value} checkSame = {checkSame}/>))
+   let  cardArray = cardNumber.map((value)=>(<Card id = {value} checkSame = {checkSame}/>))
     
    setTimeout(()=>{
         
     console.log("gayab hu mai");
-    setVanish("")
+    setFaceValue("")
           
   },2000);
       //let vanish ;
