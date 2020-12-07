@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-let Card = ({display,id,checkSame}) =>{
+let Card = ({display,id,checkSame,key}) =>{
        
     return(
        

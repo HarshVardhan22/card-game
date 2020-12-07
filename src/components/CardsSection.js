@@ -28,8 +28,8 @@ let CardSection = () => {
     }
 
     //checks if the user has clicked on the card of same value
-    else if (parseInt(e.target.id) === cardValue) {
-
+    else if ((parseInt(e.target.id) === cardValue)) {
+      
       let tempArray = cardNumber;
 
       for (let i = 0; i < cardNumber.length; i++) {
@@ -53,9 +53,11 @@ let CardSection = () => {
       setLife(life - 1);
     }
   }
+
+
   useEffect(() => {
     
-    if (life <= 1)
+    if (life < 1)
       setLost(1);
     
     if (score >= 60) 
