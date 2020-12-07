@@ -11,6 +11,13 @@
     align-items: center;
     border-radius: 10px;
     font-size: xx-large;
+    transition: 0.5s linear!important;
+
+}
+
+.card:hover{
+    transform: rotateY(30deg);
+    transition: transform 0.5s linear;
 }
 
 .sameCard{
@@ -25,4 +32,7 @@
     text-align: center;
     align-items: center;
     border-radius: 10px;
+}
+.none{
+    display: none;
 }

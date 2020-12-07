@@ -3,12 +3,92 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color : whitesmoke
+    color : whitesmoke;
+    transition: 0.5s linear!important;
 }
 .cardsContainer{
     display: flex;
     flex-wrap: wrap;
     width: 530px;
+    transition: 0.5s linear!important;  
+}
+
+.blank{
+   
+        background-color: #02c512;
+        color :	#272121;
+        height: 160px;
+        width: 120px;
+        margin: 5px;;
+        border: 1px solid #ff4d00;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: xx-large;
+        transition: 0.5s linear!important; 
     
 }
 
+.lost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    background-color: wheat;
+    color: black;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -200px;
+    
+}
+
+.win{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    background-color: wheat;
+    color: black;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.btn{
+    display: flex;
+    margin: 20px;
+}
+
+.btn button{
+    padding: 5px;
+    font-size: medium;
+    border-radius: 5px;
+    margin: 10px;
+    border: none;
+    outline: none;
+}
+
+.btn button:active{
+    border: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: violet;
+}
